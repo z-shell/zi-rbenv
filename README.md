@@ -1,6 +1,6 @@
 # `ZINIT-RBENV`
 
-`rbenv init` with [zinit](https://github.com/zdharma/zinit). It makes zsh startup faster.
+`rbenv init` with [Zinit](https://github.com/z-shell/zinit). It makes zsh startup faster.
 
 ## Usage
 
