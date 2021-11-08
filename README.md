@@ -7,7 +7,7 @@
 ```bash
 # when rbenv command in your path (e.g. installed with Homebrew)
 zinit ice wait"0" lucid
-zinit light htlsne/zinit-rbenv
+zinit light z-shell/zinit-rbenv
 ```
 
 or
@@ -15,5 +15,5 @@ or
 ```bash
 path=($HOME/.rbenv/bin(N-/) $path)
 zinit ice wait"0" lucid has"rbenv"
-zinit light htlsne/zinit-rbenv
+zinit light z-shell/zinit-rbenv
 ```
