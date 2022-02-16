@@ -5,11 +5,9 @@
 ❮ ZI ❯ Plugin - Zsh Rbenv
 </h2>
 
-# Introduction
+❮ [ZI](https://github.com/z-shell/zi/) ❯ + `rbenv init` makes Zsh startup faster.
 
-`rbenv init` with [ZI](https://github.com/z-shell/zi). It makes zsh startup faster.
-
-# Usage
+### Install
 
 ```bash
 # when rbenv command in your path (e.g. installed with Homebrew)
