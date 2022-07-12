@@ -10,4 +10,21 @@
 0="${ZERO:-${${0:#$ZSH_ARGZERO}:-${(%):-%N}}}"
 0="${${(M)0:#/*}:-$PWD/$0}"
 
-eval "$(rbenv init -)"
+if [[ $(uname) = 'Darwin' ]]; then
+  # Mac OS X uses path_helper and /etc/paths.d to preload PATH, clear it out first
+  if [ -x /usr/libexec/path_helper ]; then
+    PATH=''
+    eval "$(/usr/libexec/path_helper -s)"
+  fi
+  if which rbenv &> /dev/null; then
+    # Put the rbenv entry at the front of the line
+    if [[ -d "$HOME/.rbenv/bin" ]]; then
+      export PATH="$HOME/.rbenv/bin:$PATH"
+      # Enable shims and auto-completion
+      eval "$(rbenv init -)"
+    fi
+  fi
+else
+  # Try to enable shims and auto-completion
+  eval "$(rbenv init -)"
+fi
